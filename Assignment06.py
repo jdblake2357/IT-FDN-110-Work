@@ -228,8 +228,16 @@ while True:  # Loop will run until it sees 'break'
     elif menu_choice == '3':  # Save data to a file
         # Call write-to-file function
         FileProcessor.write_data_to_file(file_name=FILE_NAME, student_data=students)
-        print("Data saved in ", FILE_NAME)  # Confirmation message
+        print("\nData saved in:", FILE_NAME, '\n')  # Confirmation message
+        print("\nFile Contents")
         print(students)
+        print("\n Or More Clearly")
+        print("-" * 50)
+        for student in students:
+            print(f'{student["FirstName"]} '
+                  f'{student["LastName"]}, '
+                  f'{student["CourseName"]}')
+        print("-" * 50)
         continue
 
     elif menu_choice == '4':  # Exit the program
