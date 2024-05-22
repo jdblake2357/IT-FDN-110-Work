@@ -5,7 +5,8 @@
 # Change Log: (Who, When, What)
 #   RRoot,1/1/2030,Created Script
 #   JD Blake, 5/19/24, Working script initiated, written and debugged.
-#   JD Blake, 5/20/24, Final revision with full comments
+#   JD Blake, 5/20/24, Revision with full comments
+#   JD Blake, 5/21/24, Added 'clean' registration message function in IO class
 #
 # ------------------------------------------------------------------------------------------ #
 import json
@@ -38,10 +39,11 @@ menu_choice: str  # Hold the choice made by the user.
 #   PROCESSING LAYER
 #       Read in existing json data file
 #       Call functions
-#
+#       Terminate program
 # -------------------------------------------
 
 # ---------DATA LAYER-----------------------
+
 
 class FileProcessor:
     """
@@ -107,6 +109,7 @@ class IO:
         output_menu(menu)
         input_menu_choice()
         input_student_data(student_data)
+        output_student_data(student_data)
     ChangeLog:
         JD Blake, 5/19/24, Created Class and populated with functions
     """
@@ -188,7 +191,8 @@ class IO:
     @staticmethod
     def output_student_data(student_data: list):
         """
-        Function displays current student registration data stored in 'students' list
+        Function displays current student registration data stored in 'students' list formatted
+        in to a friendly sentence.
         ChangeLog:
             JD Blake, 5/19/24, Created Function
         :param student_data:
@@ -199,6 +203,24 @@ class IO:
         for student in students:
             print(f'Student {student["FirstName"]} '
                   f'{student["LastName"]} is enrolled in {student["CourseName"]}')
+        print("-" * 50)
+
+    @staticmethod
+    def output_student_data_clean(student_data: list):
+        """
+        Function displays current student registration data stored in 'students' list
+        formatted to simply display first & last name and course name
+        ChangeLog:
+            JD Blake, 5/21/24, Created Function
+        :param student_data:
+        :return:
+        """
+        # Process the data to create and display a custom message
+        print("-" * 50)
+        for student in students:
+            print(f'{student["FirstName"]} '
+                  f'{student["LastName"]}, '
+                  f'{student["CourseName"]}')
         print("-" * 50)
 
 
@@ -232,12 +254,7 @@ while True:  # Loop will run until it sees 'break'
         print("\nFile Contents")
         print(students)
         print("\n Or More Clearly")
-        print("-" * 50)
-        for student in students:
-            print(f'{student["FirstName"]} '
-                  f'{student["LastName"]}, '
-                  f'{student["CourseName"]}')
-        print("-" * 50)
+        IO.output_student_data_clean(student_data=students)
         continue
 
     elif menu_choice == '4':  # Exit the program
