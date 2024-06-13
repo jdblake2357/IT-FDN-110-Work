@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------------- #
+# Title: Presentation Classes Module
+# # Description: A collection of presentation classes for managing the application
+# ChangeLog: (Who, When, What)
+# RRoot,1.5.2030,Created Script
+# JD Blake, 6/3/24, Imported Classes from "Starter" file and modified as "presentation_classes"
+# JD Blake, 6/3/24, Drafted sample EmployeeRatings.json and ensured baseline program runs as expected
+# ------------------------------------------------------------------------------- #
 
 import data_classes as data
 
@@ -6,7 +14,8 @@ class IO:
     A collection of presentation layer functions that manage user input and output
 
     ChangeLog: (Who, When, What)
-    RRoot,1.1.2030,Created Class
+    - RRoot,1.1.2030,Created Class
+    - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
     """
     pass
 
@@ -15,7 +24,8 @@ class IO:
         """ This function displays a custom error messages to the user
 
         ChangeLog: (Who, When, What)
-        RRoot,1.3.2030,Created function
+        - RRoot,1.3.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
 
         :param message: string with message data to display
         :param error: Exception object with technical message to display
@@ -34,7 +44,8 @@ class IO:
         """ This function displays the menu of choices to the user
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
 
         :return: None
         """
@@ -48,7 +59,8 @@ class IO:
         """ This function gets a menu choice from the user
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
 
         :return: string with the users choice
         """
@@ -68,7 +80,8 @@ class IO:
         """ This function displays employee data to the user
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
 
         :param employee_data: list of employee object data to be displayed
 
@@ -96,10 +109,12 @@ class IO:
 
     @staticmethod
     def input_employee_data(employee_data: list, employee_type: data.Employee):
+    #def input_employee_data(employee_data: list, employee_type: data.Employee):
         """ This function gets the first name, last name, and GPA from the user
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to presentation_classes module
 
         :param employee_data: list of dictionary rows to be filled with input data
 

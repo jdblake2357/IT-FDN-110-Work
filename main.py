@@ -3,17 +3,13 @@
 # # Description: A collection of classes for managing the application
 # ChangeLog: (Who, When, What)
 # RRoot,1.5.2030,Created Script
-# JD Blake, 6/3/24, Imported "Starter" file and renamed as "main."
+# JD Blake, 6/3/24, Imported "Starter" file and modified as "main" and accompanying modules
 # JD Blake, 6/3/24, Drafted sample EmployeeRatings.json and ensured baseline program runs as expected
 # ------------------------------------------------------------------------------------------------- #
-
-
 
 import processing_classes as proc
 import presentation_classes as pres
 import data_classes as data
-
-
 
 # Beginning of the main body of this script
 employees = proc.FileProcessor.read_employee_data_from_file(file_name=data.FILE_NAME,

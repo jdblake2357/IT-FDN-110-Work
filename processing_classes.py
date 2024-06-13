@@ -1,15 +1,24 @@
+# ------------------------------------------------------------------------------- #
+# Title: Processing Classes Module
+# # Description: A collection of processing classes for managing the application
+# ChangeLog: (Who, When, What)
+# RRoot,1.5.2030,Created Script
+# JD Blake, 6/3/24, Imported Classes from "Starter" file and modified as "processing_classes"
+# JD Blake, 6/3/24, Drafted sample EmployeeRatings.json and ensured baseline program runs as expected
+# ------------------------------------------------------------------------------- #
+
 import json
 
 import data_classes as data
-import presentation_classes as pres
-
+#import presentation_classes as pres
 
 class FileProcessor:
     """
     A collection of processing layer functions that work with Json files
 
     ChangeLog: (Who, When, What)
-    RRoot,1.1.2030,Created Class
+    -  RRoot,1.1.2030,Created Class
+    - JD Blake, 6/3/24, Imported from "Starter" to processing_classes module
     """
 
     @staticmethod
@@ -17,7 +26,8 @@ class FileProcessor:
         """ This function reads data from a json file and loads it into a list of dictionary rows
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to processing_classes module
 
         :param file_name: string data with name of file to read from
         :param employee_data: list of dictionary rows to be filled with file data
@@ -45,7 +55,8 @@ class FileProcessor:
         """ This function writes data to a json file with data from a list of dictionary rows
 
         ChangeLog: (Who, When, What)
-        RRoot,1.1.2030,Created function
+        - RRoot,1.1.2030,Created function
+        - JD Blake, 6/3/24, Imported from "Starter" to processing_classes module
 
         :param file_name: string data with name of file to write to
         :param employee_data: list of dictionary rows to be writen to the file

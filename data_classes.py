@@ -1,3 +1,12 @@
+# ------------------------------------------------------------------------------- #
+# Title: Data Classes Module
+# # Description: A collection of data classes for managing the application
+# ChangeLog: (Who, When, What)
+# RRoot,1.5.2030,Created Script
+# JD Blake, 6/3/24, Imported CONSTANTS, Menu data and Classes from"Starter" file and modified as "data_classes"
+# JD Blake, 6/3/24, Drafted sample EmployeeRatings.json and ensured baseline program runs as expected
+# ------------------------------------------------------------------------------- #
+
 from datetime import date
 
 # Data -------------------------------------------- #
@@ -27,6 +36,7 @@ class Person:
 
     ChangeLog:
     - RRoot, 1.1.2030: Created the class.
+    - JD Blake, 6/3/24, Imported from "Starter" to data_classes
     """
 
     def __init__(self, first_name: str = "", last_name: str = ""):
@@ -71,6 +81,7 @@ class Employee(Person):
 
     ChangeLog:
     - RRoot, 1.1.2030: Created the class.
+    - JD Blake, 6/3/24, Imported from "Starter" to data_classes
     """
 
     def __init__(self, first_name: str = "", last_name: str = "", review_date: str = "1900-01-01", review_rating: int = 3):
